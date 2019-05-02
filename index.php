@@ -1,23 +1,35 @@
 <?php
 
+
     error_reporting(E_ALL);
     ini_set('display_errors','On');
     
     use \A4\Sys\Kernel;
     use \A4\Sys\Autoload;
     use \A4\Sys\Session;
+    use \A4\Sys\Registry;
 
     require_once 'x.inic.php';
-
+    require_once __DIR__.'/sys/autoload.php';
 // predefine constants
-    /*define('DS', DIRECTORY_SEPARATOR);
-    define('ROOT', realpath(__DIR__).DS);
-    define('APP', ROOT.'app'.DS);
-    define('URL', '/A4/');*/
+    //define('DS', DIRECTORY_SEPARATOR);
+    //define('ROOT', realpath(__DIR__).DS);
+    //define('APP', ROOT.'app'.DS);
+    define('URL', '/A4/');
     
     // config file
-    require_once __DIR__.'/sys/autoload.php';
+    /*
 
+    try{
+        $pdo = new PDO("mysql:host=amilia.cesnuria.com;dbname=amilia_todo","amilia_todo2","linuxlinux");
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }*/
+
+    /*
+    $stmt=$pdo->prepare('SELECT * FROM usuarios');
+    $stmt->execute();
+    var_dump($stmt);*/
 
 
     // metodos de autocarga

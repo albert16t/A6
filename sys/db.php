@@ -28,7 +28,11 @@ class DB extends \PDO { //implements DBAdapter
         $dsn=$dbconf['driver'].':host='.$dbconf['dbhost'].';dbname='.$dbconf['dbname'];
         $usr=$dbconf['dbuser'];
         $pwd=$dbconf['dbpass'];
-        parent::__construct($dsn,$usr,$pwd);
+        try {
+            parent::__construct($dsn, $usr, $pwd);
+        }catch(\PDOException $e){
+            echo $e->getMessage();
+        }
         
     }
     

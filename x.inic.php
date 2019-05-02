@@ -28,9 +28,9 @@ function root(){
     }
 }
 function env(){
-    if ($_SERVER['SERVER_ADDR']=='127.0.0.1'){
-        return 'dev';
-    }else{
+    if ($_SERVER['HTTP_HOST']=='172.17.0.2'){
         return 'pro';
+    }else{
+        return 'dev';
     }
 }

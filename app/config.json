@@ -3,10 +3,17 @@
     "tittle":"Framework",
     "version":"1.0"
   },
+  "dbconf_dev":{
+    "driver":"mysql",
+    "dbhost":"172.17.0.2",
+    "dbuser":"blog",
+    "dbpass":"linuxlinux",
+    "dbname":"amilia_todo"
+  },
   "dbconf_pro":{
     "driver":"mysql",
-    "dbhost":"amilia.cesnuria.com",
-    "dbuser":"amilia_amilia",
+    "dbhost":"172.17.0.2",
+    "dbuser":"blog",
     "dbpass":"linuxlinux",
     "dbname":"amilia_todo"
   }
